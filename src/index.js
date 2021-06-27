@@ -1,7 +1,7 @@
 const carousel = document.getElementById("carousel");
 
-const leftButton = document.querySelector(".left");
-const rightButton = document.querySelector(".right");
+const leftButtons = document.querySelectorAll(".left");
+const rightButtons = document.querySelectorAll(".right");
 
 const trigger1 = document.querySelector(".trigger-1");
 const trigger2 = document.querySelector(".trigger-2");
@@ -47,13 +47,17 @@ const fillCircle = (newNumber) => {
   circleToFill.classList.add("filled");
 }
 
-rightButton.addEventListener("click", () => {
-  next(carousel);
-})
+rightButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    next(carousel);
+  })
+});
 
-leftButton.addEventListener("click", () => {
-  prev(carousel);
-})
+leftButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    prev(carousel);
+  })
+});
 
 trigger1.addEventListener("click", () => {
   let number = getNumber(carousel);

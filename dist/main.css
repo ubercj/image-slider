@@ -135,6 +135,14 @@ input, select {
   margin-bottom: 20px;
 }
 
+.mobile {
+  display: none;
+}
+
+.mobile-buttons {
+  display: flex;
+}
+
 .left,
 .right {
   height: 100px;
@@ -144,6 +152,7 @@ input, select {
 
 .nav-dots {
   display: flex;
+  align-items: center;
 }
 
 .circle {
@@ -196,4 +205,51 @@ img {
 
 .pic5 {
   transform: translate(-1600px, 0);
+}
+
+/* ================== Mobile ====================== */
+
+@media screen and (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .nav-dots > .right {
+    margin-left: 8px;
+  }
+
+  img,
+  #frame {
+    width: 100vw;
+    height: auto;
+  }
+
+  .control {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .pic1 {
+    transform: translate(0, 0);
+  }
+  
+  .pic2 {
+    transform: translate(-100vw, 0);
+  }
+  
+  .pic3 {
+    transform: translate(-200vw, 0);
+  }
+  
+  .pic4 {
+    transform: translate(-300vw, 0);
+  }
+  
+  .pic5 {
+    transform: translate(-400vw, 0);
+  }
 }
