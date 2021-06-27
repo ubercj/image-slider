@@ -1,0 +1,255 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* ================================================================ */
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+}
+
+#frame {
+  border: 2px double blue;
+  width: 400px;
+  height: 400px;
+  overflow-x: hidden;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#carousel {
+  display: flex;
+
+  transition: transform 500ms ease-in-out;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  height: 400px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mobile {
+  display: none;
+}
+
+.mobile-buttons {
+  display: flex;
+}
+
+.left,
+.right {
+  height: 100px;
+  width: 60px;
+  font-size: 2rem;
+}
+
+.nav-dots {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  height: 20px;
+  width: 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+.filled {
+  background-color: rgb(22, 22, 126);
+}
+
+.circle:hover {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+img {
+  height: 400px;
+  width: 400px;
+}
+
+/* ============== Slider Classes ================= */
+
+.pic1 {
+  transform: translate(0, 0);
+}
+
+.pic2 {
+  transform: translate(-400px, 0);
+}
+
+.pic3 {
+  transform: translate(-800px, 0);
+}
+
+.pic4 {
+  transform: translate(-1200px, 0);
+}
+
+.pic5 {
+  transform: translate(-1600px, 0);
+}
+
+/* ================== Mobile ====================== */
+
+@media screen and (max-width: 600px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .nav-dots > .right {
+    margin-left: 8px;
+  }
+
+  img,
+  #frame {
+    width: 100vw;
+    height: auto;
+  }
+
+  .control {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .pic1 {
+    transform: translate(0, 0);
+  }
+  
+  .pic2 {
+    transform: translate(-100vw, 0);
+  }
+  
+  .pic3 {
+    transform: translate(-200vw, 0);
+  }
+  
+  .pic4 {
+    transform: translate(-300vw, 0);
+  }
+  
+  .pic5 {
+    transform: translate(-400vw, 0);
+  }
+}
