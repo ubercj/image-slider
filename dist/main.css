@@ -225,7 +225,7 @@ img {
   img,
   #frame {
     width: 100vw;
-    height: auto;
+    height: 400px;
   }
 
   .control {
